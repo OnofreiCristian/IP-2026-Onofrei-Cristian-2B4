@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1350 980" width="1350" height="980" font-family="Segoe UI, Arial, sans-serif" font-size="13">
+
+  <defs>
+    <marker id="arr-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#9b2226"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1350" height="980" fill="#f8f9fa" rx="10"/>
+  <text x="675" y="35" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a1a2e">UML Use Case Diagram – Marketplace</text>
+
+  <!-- ================================================================ -->
+  <!-- SYSTEM BOUNDARY -->
+  <!-- ================================================================ -->
+  <rect x="245" y="52" width="820" height="870" fill="white" stroke="#4a4a8a" stroke-width="2" rx="8" stroke-dasharray="6,3"/>
+  <text x="655" y="73" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a4a8a">«sistem» Marketplace</text>
+
+  <!-- ================================================================ -->
+  <!-- ACTORS (left side) -->
+  <!-- ================================================================ -->
+
+  <!-- Actor: Guest (nelogat) -->
+  <g id="a-guest">
+    <circle cx="80" cy="230" r="20" fill="none" stroke="#2d6a4f" stroke-width="2.2"/>
+    <line x1="80" y1="250" x2="80" y2="308" stroke="#2d6a4f" stroke-width="2.2"/>
+    <line x1="48" y1="275" x2="112" y2="275" stroke="#2d6a4f" stroke-width="2.2"/>
+    <line x1="80" y1="308" x2="52" y2="340" stroke="#2d6a4f" stroke-width="2.2"/>
+    <line x1="80" y1="308" x2="108" y2="340" stroke="#2d6a4f" stroke-width="2.2"/>
+    <text x="80" y="360" text-anchor="middle" font-size="12" fill="#2d6a4f" font-weight="bold">Client</text>
+    <text x="80" y="375" text-anchor="middle" font-size="11" fill="#2d6a4f">(nelogat)</text>
+  </g>
+
+  <!-- Actor: Client logat -->
+  <g id="a-logged">
+    <circle cx="80" cy="540" r="20" fill="none" stroke="#1d3557" stroke-width="2.2"/>
+    <line x1="80" y1="560" x2="80" y2="618" stroke="#1d3557" stroke-width="2.2"/>
+    <line x1="48" y1="585" x2="112" y2="585" stroke="#1d3557" stroke-width="2.2"/>
+    <line x1="80" y1="618" x2="52" y2="650" stroke="#1d3557" stroke-width="2.2"/>
+    <line x1="80" y1="618" x2="108" y2="650" stroke="#1d3557" stroke-width="2.2"/>
+    <text x="80" y="670" text-anchor="middle" font-size="12" fill="#1d3557" font-weight="bold">Client</text>
+    <text x="80" y="685" text-anchor="middle" font-size="11" fill="#1d3557">(logat)</text>
+  </g>
+
+  <!-- Inheritance arrow: logat extends nelogat -->
+  <line x1="80" y1="376" x2="80" y2="517" stroke="#555" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="80,517 74,502 86,502" fill="#555"/>
+  <text x="96" y="452" font-size="11" fill="#555">«extends»</text>
+
+  <!-- ================================================================ -->
+  <!-- ACTORS (right side) -->
+  <!-- ================================================================ -->
+
+  <!-- Actor: Seller -->
+  <g id="a-seller">
+    <circle cx="1270" cy="430" r="20" fill="none" stroke="#9b2226" stroke-width="2.2"/>
+    <line x1="1270" y1="450" x2="1270" y2="508" stroke="#9b2226" stroke-width="2.2"/>
+    <line x1="1238" y1="475" x2="1302" y2="475" stroke="#9b2226" stroke-width="2.2"/>
+    <line x1="1270" y1="508" x2="1242" y2="540" stroke="#9b2226" stroke-width="2.2"/>
+    <line x1="1270" y1="508" x2="1298" y2="540" stroke="#9b2226" stroke-width="2.2"/>
+    <text x="1270" y="560" text-anchor="middle" font-size="12" fill="#9b2226" font-weight="bold">Vânzător</text>
+  </g>
+
+  <!-- Actor: Admin -->
+  <g id="a-admin">
+    <circle cx="1270" cy="720" r="20" fill="none" stroke="#4a148c" stroke-width="2.2"/>
+    <line x1="1270" y1="740" x2="1270" y2="798" stroke="#4a148c" stroke-width="2.2"/>
+    <line x1="1238" y1="765" x2="1302" y2="765" stroke="#4a148c" stroke-width="2.2"/>
+    <line x1="1270" y1="798" x2="1242" y2="830" stroke="#4a148c" stroke-width="2.2"/>
+    <line x1="1270" y1="798" x2="1298" y2="830" stroke="#4a148c" stroke-width="2.2"/>
+    <text x="1270" y="850" text-anchor="middle" font-size="12" fill="#4a148c" font-weight="bold">Admin</text>
+  </g>
+
+  <!-- ================================================================ -->
+  <!-- USE CASES — PUBLIC (green) -->
+  <!-- ================================================================ -->
+  <ellipse cx="510" cy="110" rx="105" ry="24" fill="#e8f4f8" stroke="#4a4a8a" stroke-width="1.5"/>
+  <text x="510" y="115" text-anchor="middle" font-size="12">Login / Înregistrare</text>
+
+  <ellipse cx="510" cy="170" rx="105" ry="24" fill="#d8f3dc" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="510" y="175" text-anchor="middle" font-size="12">Vizualizare produse</text>
+
+  <ellipse cx="510" cy="230" rx="105" ry="24" fill="#d8f3dc" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="510" y="235" text-anchor="middle" font-size="12">Adăugare în coș</text>
+
+  <ellipse cx="510" cy="290" rx="105" ry="24" fill="#d8f3dc" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="510" y="295" text-anchor="middle" font-size="12">Adăugare la favorite</text>
+
+  <ellipse cx="510" cy="350" rx="105" ry="24" fill="#d8f3dc" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="510" y="355" text-anchor="middle" font-size="12">Plasare comandă</text>
+
+  <!-- Salvare adresă/card (conditional) -->
+  <ellipse cx="760" cy="285" rx="108" ry="24" fill="#fff3cd" stroke="#e09f3e" stroke-width="1.5"/>
+  <text x="760" y="281" text-anchor="middle" font-size="11">Salvare adresă / card</text>
+  <text x="760" y="295" text-anchor="middle" font-size="10" fill="#888">(doar dacă logat)</text>
+
+  <ellipse cx="510" cy="415" rx="105" ry="24" fill="#d8f3dc" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="510" y="420" text-anchor="middle" font-size="12">Acces secțiune Help</text>
+
+  <!-- ================================================================ -->
+  <!-- USE CASES — LOGGED IN ONLY (blue) -->
+  <!-- ================================================================ -->
+  <ellipse cx="510" cy="500" rx="105" ry="24" fill="#cce5ff" stroke="#1d3557" stroke-width="1.5"/>
+  <text x="510" y="505" text-anchor="middle" font-size="12">Istoric comenzi</text>
+
+  <ellipse cx="510" cy="565" rx="105" ry="24" fill="#cce5ff" stroke="#1d3557" stroke-width="1.5"/>
+  <text x="510" y="570" text-anchor="middle" font-size="12">Urmărire comandă</text>
+
+  <ellipse cx="510" cy="630" rx="105" ry="24" fill="#cce5ff" stroke="#1d3557" stroke-width="1.5"/>
+  <text x="510" y="635" text-anchor="middle" font-size="12">Adăugare rating</text>
+
+  <ellipse cx="510" cy="695" rx="105" ry="24" fill="#cce5ff" stroke="#1d3557" stroke-width="1.5"/>
+  <text x="510" y="700" text-anchor="middle" font-size="12">Asistență online</text>
+
+  <!-- ================================================================ -->
+  <!-- USE CASES — SELLER (red) -->
+  <!-- ================================================================ -->
+  <ellipse cx="870" cy="350" rx="110" ry="24" fill="#fde8e8" stroke="#9b2226" stroke-width="1.5"/>
+  <text x="870" y="355" text-anchor="middle" font-size="12">Listare produs</text>
+
+  <ellipse cx="870" cy="415" rx="110" ry="24" fill="#fde8e8" stroke="#9b2226" stroke-width="1.5"/>
+  <text x="870" y="420" text-anchor="middle" font-size="12">Primire comandă</text>
+
+  <ellipse cx="870" cy="480" rx="110" ry="24" fill="#fde8e8" stroke="#9b2226" stroke-width="1.5"/>
+  <text x="870" y="485" text-anchor="middle" font-size="12">Pregătire comandă</text>
+
+  <ellipse cx="870" cy="545" rx="110" ry="24" fill="#fde8e8" stroke="#9b2226" stroke-width="1.5"/>
+  <text x="870" y="550" text-anchor="middle" font-size="12">Predare curier</text>
+
+  <ellipse cx="870" cy="610" rx="110" ry="24" fill="#fde8e8" stroke="#9b2226" stroke-width="1.5"/>
+  <text x="870" y="615" text-anchor="middle" font-size="12">Update status comandă</text>
+
+  <!-- ================================================================ -->
+  <!-- USE CASES — ADMIN (purple) -->
+  <!-- ================================================================ -->
+  <ellipse cx="870" cy="690" rx="110" ry="24" fill="#ede7f6" stroke="#4a148c" stroke-width="1.5"/>
+  <text x="870" y="695" text-anchor="middle" font-size="12">Aprobare / ștergere listing</text>
+
+  <ellipse cx="870" cy="755" rx="110" ry="24" fill="#ede7f6" stroke="#4a148c" stroke-width="1.5"/>
+  <text x="870" y="760" text-anchor="middle" font-size="12">Rezolvare ticket suport</text>
+
+  <ellipse cx="870" cy="820" rx="110" ry="24" fill="#ede7f6" stroke="#4a148c" stroke-width="1.5"/>
+  <text x="870" y="825" text-anchor="middle" font-size="12">Moderare review-uri</text>
+
+  <ellipse cx="870" cy="885" rx="110" ry="24" fill="#ede7f6" stroke="#4a148c" stroke-width="1.5"/>
+  <text x="870" y="890" text-anchor="middle" font-size="12">Suspendare utilizator</text>
+
+  <!-- ================================================================ -->
+  <!-- ASSOCIATIONS: Guest → UCs -->
+  <!-- ================================================================ -->
+  <line x1="100" y1="218" x2="405" y2="118" stroke="#2d6a4f" stroke-width="1.5"/>
+  <line x1="100" y1="225" x2="405" y2="172" stroke="#2d6a4f" stroke-width="1.5"/>
+  <line x1="100" y1="233" x2="405" y2="230" stroke="#2d6a4f" stroke-width="1.5"/>
+  <line x1="100" y1="240" x2="405" y2="290" stroke="#2d6a4f" stroke-width="1.5"/>
+  <line x1="100" y1="248" x2="405" y2="350" stroke="#2d6a4f" stroke-width="1.5"/>
+  <line x1="100" y1="256" x2="405" y2="415" stroke="#2d6a4f" stroke-width="1.5"/>
+
+  <!-- ================================================================ -->
+  <!-- ASSOCIATIONS: Client logat → UCs -->
+  <!-- ================================================================ -->
+  <line x1="100" y1="530" x2="405" y2="500" stroke="#1d3557" stroke-width="1.5"/>
+  <line x1="100" y1="542" x2="405" y2="565" stroke="#1d3557" stroke-width="1.5"/>
+  <line x1="100" y1="554" x2="405" y2="630" stroke="#1d3557" stroke-width="1.5"/>
+  <line x1="100" y1="566" x2="405" y2="695" stroke="#1d3557" stroke-width="1.5"/>
+
+  <!-- ================================================================ -->
+  <!-- INCLUDE: Plasare comandă → Salvare adresă/card -->
+  <!-- ================================================================ -->
+  <line x1="580" y1="338" x2="648" y2="297" stroke="#e09f3e" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <polygon points="648,297 636,298 640,309" fill="#e09f3e"/>
+  <text x="590" y="310" font-size="10" fill="#e09f3e">«extend»</text>
+
+  <!-- ================================================================ -->
+  <!-- ASSOCIATIONS: Seller → UCs -->
+  <!-- ================================================================ -->
+  <line x1="1250" y1="420" x2="980" y2="355" stroke="#9b2226" stroke-width="1.5"/>
+  <line x1="1252" y1="430" x2="980" y2="418" stroke="#9b2226" stroke-width="1.5"/>
+  <line x1="1252" y1="440" x2="980" y2="482" stroke="#9b2226" stroke-width="1.5"/>
+  <line x1="1250" y1="450" x2="980" y2="547" stroke="#9b2226" stroke-width="1.5"/>
+  <line x1="1248" y1="460" x2="980" y2="612" stroke="#9b2226" stroke-width="1.5"/>
+
+  <!-- Seller notifică client la update status -->
+  <line x1="760" y1="610" x2="615" y2="565" stroke="#9b2226" stroke-width="1.3" stroke-dasharray="5,3"/>
+  <polygon points="615,565 626,557 628,569" fill="#9b2226"/>
+  <text x="665" y="582" font-size="10" fill="#9b2226">«notifică»</text>
+
+  <!-- ================================================================ -->
+  <!-- ASSOCIATIONS: Admin → UCs -->
+  <!-- ================================================================ -->
+  <line x1="1250" y1="712" x2="980" y2="693" stroke="#4a148c" stroke-width="1.5"/>
+  <line x1="1252" y1="724" x2="980" y2="757" stroke="#4a148c" stroke-width="1.5"/>
+  <line x1="1252" y1="736" x2="980" y2="822" stroke="#4a148c" stroke-width="1.5"/>
+  <line x1="1250" y1="748" x2="980" y2="887" stroke="#4a148c" stroke-width="1.5"/>
+
+  <!-- ================================================================ -->
+  <!-- LEGEND -->
+  <!-- ================================================================ -->
+  <rect x="255" y="800" width="230" height="110" fill="#f0f0f0" stroke="#aaa" stroke-width="1" rx="6"/>
+  <text x="370" y="820" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">Legendă</text>
+
+  <rect x="268" y="830" width="14" height="14" fill="#d8f3dc" stroke="#2d6a4f"/>
+  <text x="290" y="842" font-size="11" fill="#333">Disponibil fără login</text>
+
+  <rect x="268" y="850" width="14" height="14" fill="#cce5ff" stroke="#1d3557"/>
+  <text x="290" y="862" font-size="11" fill="#333">Necesită login</text>
+
+  <rect x="268" y="870" width="14" height="14" fill="#fde8e8" stroke="#9b2226"/>
+  <text x="290" y="882" font-size="11" fill="#333">Acțiuni vânzător</text>
+
+  <rect x="268" y="890" width="14" height="14" fill="#ede7f6" stroke="#4a148c"/>
+  <text x="290" y="902" font-size="11" fill="#333">Acțiuni admin</text>
+
+  <rect x="420" y="830" width="14" height="14" fill="#fff3cd" stroke="#e09f3e"/>
+  <text x="442" y="842" font-size="11" fill="#333">Funcționalitate condiționată</text>
+
+  <line x1="420" y1="857" x2="440" y2="857" stroke="#555" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="440,857 432,853 432,861" fill="#555"/>
+  <text x="444" y="861" font-size="11" fill="#333">Moștenire actor</text>
+
+  <line x1="420" y1="877" x2="440" y2="877" stroke="#e09f3e" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="440,877 432,873 432,881" fill="#e09f3e"/>
+  <text x="444" y="881" font-size="11" fill="#333">Relație «extend» / «notifică»</text>
+
+  <rect x="268" y="908" width="180" height="1" fill="none"/>
+  <text x="268" y="920" font-size="10" fill="#888" font-style="italic">* Adresa/cardul se salvează doar dacă ești logat</text>
+
+</svg>

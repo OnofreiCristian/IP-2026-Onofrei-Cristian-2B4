@@ -1,0 +1,32 @@
+Descrierea Problemei:
+Compania doreste o aplicatie prin care: utilizatorii clienti pot vedea si cumpara diverse produse bazate pe termeni de cautare. Sistemul ofera functionalitati diferite pentru trei mari categorii: client, administrator si vanzator. Clientii pot sa salveze produse, sa le cumpere, sa lase recenzii, sa faca retur la produs. Administratorii pot sa gestioneze site-ul, sa aprobe sau sa refuze anumite produse, sa ajute clientii si vanzatorii in problemele care le intampine. Vanzatorii pot sa listeze produse, pot sa trimita produsul clientului.  Scopul este de a oferi cea mai larga gama de produse clientilor pentru a fi cumparate, si pentru a oferi vanzatorilor oportunitatea de a vinde produsele lor la publicul cel mai mare.
+
+Actorii:
+Clienti vizitatori
+Clienti inregistrati
+Vanzatori
+Administratori
+
+Scenarii de utilizare:
+
+Client vizitator
+- Cautarea produselor: clientul poate sa caute produse in functie de cuvinte cheie
+- Salvarea la favorite: clientul poate sa salveze produsele cautate / vizualizate
+- inregistrare in sistem: clientul poate sa creeze un cont nou, furnizand datele de baza pentru a putea plasa comanda
+
+Client inregistrat:
+- Plasarea comenzii: adauga produse in cos, selecteaza detaliile de livrare, si finalizeaza achizitia
+- Gestionarea profilului: isi actualizeaza detaliile personale, adresa de livrare si urmareste statusul comenzilor active
+- Evaluarea produselor: poate lasa o recenzie unui produs cumparat
+- Initierea unui retur: poate sa returneze un produs achizitionat recent
+
+Vanzator
+- Listarea produselor: propune spre aprobare listarea de produse noi pentru a fi vandute pe market
+- Gestionarea comenzilor: proceseaza comenzile primite si initializeaza trimiterea produselor spre client
+- Actualizarea ofertelor: modifica preturile si stocurile disponibile
+
+Administrator
+- Moderarea catalogului: Verifica daca produsele date spre listare de catre vanzator sunt conform standardelor site-ului
+- Moderarea recenziilor: analizeaza recenziile lasate de clienti pentru a verifica daca sunt adecvate
+- Suport tehnic si administrativ: ofera asistenta clientilor si vanzatorilor cu posibilele probleme pe care le pot intampina
+

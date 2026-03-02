@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1760 1200" width="1760" height="1200"
+     font-family="Consolas, 'Courier New', monospace" font-size="11">
+
+  <defs>
+    <marker id="inherit" markerWidth="14" markerHeight="12" refX="12" refY="6" orient="auto">
+      <polygon points="0,0 12,6 0,12" fill="white" stroke="#444" stroke-width="1.5"/>
+    </marker>
+    <marker id="assoc" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8" fill="none" stroke="#333" stroke-width="1.3"/>
+    </marker>
+    <marker id="dep" markerWidth="10" markerHeight="10" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8" fill="none" stroke="#777" stroke-width="1.3"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1700" height="1200" fill="#f5f6fa" rx="12"/>
+  <text x="850" y="30" text-anchor="middle" font-size="18" font-weight="bold"
+        fill="#1a1a3e" font-family="Segoe UI, Arial, sans-serif">
+    Diagramă de Clase – Marketplace
+  </text>
+
+  <!-- helper macro: class box -->
+  <!-- CLASS: User (abstract) -->
+  <g id="User">
+    <rect x="680" y="45" width="235" height="140" fill="#e8eaf6" stroke="#3949ab" stroke-width="2" rx="4"/>
+    <rect x="680" y="45" width="235" height="26" fill="#3949ab" rx="4"/>
+    <rect x="680" y="67" width="235" height="4" fill="#3949ab"/>
+    <text x="797" y="63" text-anchor="middle" fill="white" font-weight="bold" font-size="12">«abstract» User</text>
+    <line x1="680" y1="97" x2="915" y2="97" stroke="#3949ab" stroke-width="1"/>
+    <text x="690" y="111" fill="#333" font-size="11">- userId: String</text>
+    <text x="690" y="125" fill="#333" font-size="11">- email: String</text>
+    <text x="690" y="139" fill="#333" font-size="11">- isLoggedIn: Boolean</text>
+    <line x1="680" y1="147" x2="915" y2="147" stroke="#3949ab" stroke-width="1"/>
+    <text x="690" y="161" fill="#1a237e" font-size="11">+ login(): void</text>
+    <text x="690" y="175" fill="#1a237e" font-size="11">+ logout(): void</text>
+  </g>
+
+  <!-- CLASS: GuestClient -->
+  <g id="GuestClient">
+    <rect x="55" y="265" width="250" height="185" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" rx="4"/>
+    <rect x="55" y="265" width="250" height="26" fill="#2e7d32" rx="4"/>
+    <rect x="55" y="287" width="250" height="4" fill="#2e7d32"/>
+    <text x="180" y="283" text-anchor="middle" fill="white" font-weight="bold" font-size="12">GuestClient</text>
+    <line x1="55" y1="310" x2="305" y2="310" stroke="#2e7d32" stroke-width="1"/>
+    <text x="65" y="325" fill="#333" font-size="11">- sessionId: String</text>
+    <line x1="55" y1="333" x2="305" y2="333" stroke="#2e7d32" stroke-width="1"/>
+    <text x="65" y="348" fill="#1a237e" font-size="11">+ browseProducts(): List</text>
+    <text x="65" y="362" fill="#1a237e" font-size="11">+ addToCart(p: Product): void</text>
+    <text x="65" y="376" fill="#1a237e" font-size="11">+ addToFavorites(p: Product): void</text>
+    <text x="65" y="390" fill="#1a237e" font-size="11">+ placeOrder(p: Product, addr: String): Order</text>
+    <text x="65" y="404" fill="#1a237e" font-size="11">+ accessHelp(): void</text>
+    <text x="65" y="418" fill="#1a237e" font-size="11">+ getSessionId(): String</text>
+  </g>
+
+  <!-- CLASS: RegisteredClient -->
+  <g id="RegisteredClient">
+    <rect x="565" y="265" width="270" height="215" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" rx="4"/>
+    <rect x="565" y="265" width="270" height="26" fill="#1565c0" rx="4"/>
+    <rect x="565" y="287" width="270" height="4" fill="#1565c0"/>
+    <text x="700" y="283" text-anchor="middle" fill="white" font-weight="bold" font-size="12">RegisteredClient</text>
+    <line x1="565" y1="310" x2="835" y2="310" stroke="#1565c0" stroke-width="1"/>
+    <text x="575" y="325" fill="#333" font-size="11">- savedAddresses: List&lt;String&gt;</text>
+    <text x="575" y="339" fill="#333" font-size="11">- savedCards: List&lt;String&gt;</text>
+    <line x1="565" y1="347" x2="835" y2="347" stroke="#1565c0" stroke-width="1"/>
+    <text x="575" y="362" fill="#1a237e" font-size="11">+ getOrderHistory(): List</text>
+    <text x="575" y="376" fill="#1a237e" font-size="11">+ addRating(p: Product, score: int, c: String): void</text>
+    <text x="575" y="390" fill="#1a237e" font-size="11">+ requestSupport(subject: String): SupportTicket</text>
+    <text x="575" y="404" fill="#1a237e" font-size="11">+ trackOrder(orderId: String): void</text>
+    <text x="575" y="418" fill="#1a237e" font-size="11">+ saveAddress(address: String): void</text>
+    <text x="575" y="432" fill="#1a237e" font-size="11">+ saveCard(card: String): void</text>
+    <text x="575" y="446" fill="#1a237e" font-size="11">+ addOrder(order: Order): void</text>
+    <text x="575" y="460" fill="#1a237e" font-size="11">+ getSavedAddresses(): List</text>
+  </g>
+
+  <!-- CLASS: Admin -->
+  <g id="Admin">
+    <rect x="1210" y="265" width="265" height="185" fill="#ede7f6" stroke="#4a148c" stroke-width="2" rx="4"/>
+    <rect x="1210" y="265" width="265" height="26" fill="#4a148c" rx="4"/>
+    <rect x="1210" y="287" width="265" height="4" fill="#4a148c"/>
+    <text x="1342" y="283" text-anchor="middle" fill="white" font-weight="bold" font-size="12">Admin</text>
+    <line x1="1210" y1="310" x2="1475" y2="310" stroke="#4a148c" stroke-width="1"/>
+    <text x="1220" y="325" fill="#333" font-size="11">- adminId: String</text>
+    <text x="1220" y="339" fill="#333" font-size="11">- role: String</text>
+    <line x1="1210" y1="347" x2="1475" y2="347" stroke="#4a148c" stroke-width="1"/>
+    <text x="1220" y="362" fill="#1a237e" font-size="11">+ manageListings(p: Product, approve: boolean): void</text>
+    <text x="1220" y="376" fill="#1a237e" font-size="11">+ resolveTicket(t: SupportTicket): void</text>
+    <text x="1220" y="390" fill="#1a237e" font-size="11">+ suspendUser(u: User): void</text>
+    <text x="1220" y="404" fill="#1a237e" font-size="11">+ moderateReviews(r: Rating, approve: boolean): void</text>
+    <text x="1220" y="418" fill="#1a237e" font-size="11">+ viewReports(): Report</text>
+    <text x="1220" y="432" fill="#1a237e" font-size="11">+ manageCoupons(): void</text>
+    <text x="1220" y="446" fill="#1a237e" font-size="11">+ getRole(): String</text>
+  </g>
+
+  <!-- CLASS: Seller -->
+  <g id="Seller">
+    <rect x="840" y="265" width="265" height="200" fill="#fce4ec" stroke="#880e4f" stroke-width="2" rx="4"/>
+    <rect x="840" y="265" width="265" height="26" fill="#880e4f" rx="4"/>
+    <rect x="840" y="287" width="265" height="4" fill="#880e4f"/>
+    <text x="972" y="283" text-anchor="middle" fill="white" font-weight="bold" font-size="12">Seller</text>
+    <line x1="840" y1="310" x2="1105" y2="310" stroke="#880e4f" stroke-width="1"/>
+    <text x="850" y="325" fill="#333" font-size="11">- sellerId: String</text>
+    <text x="850" y="339" fill="#333" font-size="11">- shopName: String</text>
+    <text x="850" y="353" fill="#333" font-size="11">- email: String</text>
+    <line x1="840" y1="361" x2="1105" y2="361" stroke="#880e4f" stroke-width="1"/>
+    <text x="850" y="376" fill="#1a237e" font-size="11">+ listProduct(p: Product): void</text>
+    <text x="850" y="390" fill="#1a237e" font-size="11">+ prepareOrder(o: Order): void</text>
+    <text x="850" y="404" fill="#1a237e" font-size="11">+ handToCourier(o: Order): void</text>
+    <text x="850" y="418" fill="#1a237e" font-size="11">+ updateOrderStatus(o: Order, s: OrderStatus): void</text>
+    <text x="850" y="432" fill="#1a237e" font-size="11">+ respondToSupport(t: SupportTicket, msg: String): void</text>
+    <text x="850" y="446" fill="#1a237e" font-size="11">+ getProducts(): List</text>
+    <text x="850" y="460" fill="#1a237e" font-size="11">+ getShopName(): String</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- ROW 2: Product, Order, OrderStatus, SupportTicket, Rating -->
+  <!-- ============================================================ -->
+
+  <!-- CLASS: Product -->
+  <g id="Product">
+    <rect x="55" y="600" width="265" height="230" fill="#fff8e1" stroke="#f57f17" stroke-width="2" rx="4"/>
+    <rect x="55" y="600" width="265" height="26" fill="#f57f17" rx="4"/>
+    <rect x="55" y="622" width="265" height="4" fill="#f57f17"/>
+    <text x="187" y="618" text-anchor="middle" fill="white" font-weight="bold" font-size="12">Product</text>
+    <line x1="55" y1="650" x2="320" y2="650" stroke="#f57f17" stroke-width="1"/>
+    <text x="65" y="665" fill="#333" font-size="11">- productId: String</text>
+    <text x="65" y="679" fill="#333" font-size="11">- name: String</text>
+    <text x="65" y="693" fill="#333" font-size="11">- price: Double</text>
+    <text x="65" y="707" fill="#333" font-size="11">- stock: Integer</text>
+    <text x="65" y="721" fill="#333" font-size="11">- isApproved: Boolean</text>
+    <line x1="55" y1="729" x2="320" y2="729" stroke="#f57f17" stroke-width="1"/>
+    <text x="65" y="744" fill="#1a237e" font-size="11">+ updateStock(qty: int): void</text>
+    <text x="65" y="758" fill="#1a237e" font-size="11">+ addRating(r: Rating): void</text>
+    <text x="65" y="772" fill="#1a237e" font-size="11">+ getAverageRating(): Double</text>
+    <text x="65" y="786" fill="#1a237e" font-size="11">+ getName(): String</text>
+    <text x="65" y="800" fill="#1a237e" font-size="11">+ getPrice(): Double</text>
+    <text x="65" y="814" fill="#1a237e" font-size="11">+ setApproved(val: boolean): void</text>
+  </g>
+
+  <!-- CLASS: Order -->
+  <g id="Order">
+    <rect x="370" y="600" width="270" height="230" fill="#e0f2f1" stroke="#00695c" stroke-width="2" rx="4"/>
+    <rect x="370" y="600" width="270" height="26" fill="#00695c" rx="4"/>
+    <rect x="370" y="622" width="270" height="4" fill="#00695c"/>
+    <text x="505" y="618" text-anchor="middle" fill="white" font-weight="bold" font-size="12">Order</text>
+    <line x1="370" y1="650" x2="640" y2="650" stroke="#00695c" stroke-width="1"/>
+    <text x="380" y="665" fill="#333" font-size="11">- orderId: String</text>
+    <text x="380" y="679" fill="#333" font-size="11">- status: OrderStatus</text>
+    <text x="380" y="693" fill="#333" font-size="11">- totalPrice: Double</text>
+    <text x="380" y="707" fill="#333" font-size="11">- placedAt: DateTime</text>
+    <text x="380" y="721" fill="#333" font-size="11">- deliveryAddress: String</text>
+    <line x1="370" y1="729" x2="640" y2="729" stroke="#00695c" stroke-width="1"/>
+    <text x="380" y="744" fill="#1a237e" font-size="11">+ updateStatus(s: OrderStatus): void</text>
+    <text x="380" y="758" fill="#1a237e" font-size="11">+ cancel(): void</text>
+    <text x="380" y="772" fill="#1a237e" font-size="11">+ getTracking(): String</text>
+    <text x="380" y="786" fill="#1a237e" font-size="11">+ getOrderId(): String</text>
+    <text x="380" y="800" fill="#1a237e" font-size="11">+ getStatus(): OrderStatus</text>
+    <text x="380" y="814" fill="#1a237e" font-size="11">+ getTotalPrice(): Double</text>
+  </g>
+
+  <!-- CLASS: OrderStatus (enum) -->
+  <g id="OrderStatus">
+    <rect x="690" y="600" width="195" height="185" fill="#fce4ec" stroke="#ad1457" stroke-width="2" rx="4" stroke-dasharray="6,2"/>
+    <rect x="690" y="600" width="195" height="26" fill="#ad1457" rx="4"/>
+    <rect x="690" y="622" width="195" height="4" fill="#ad1457"/>
+    <text x="787" y="614" text-anchor="middle" fill="white" font-size="10">«enumeration»</text>
+    <text x="787" y="627" text-anchor="middle" fill="white" font-weight="bold" font-size="12">OrderStatus</text>
+    <line x1="690" y1="636" x2="885" y2="636" stroke="#ad1457" stroke-width="1"/>
+    <text x="700" y="653" fill="#555" font-size="11">PLACED</text>
+    <text x="700" y="669" fill="#555" font-size="11">PREPARING</text>
+    <text x="700" y="685" fill="#555" font-size="11">IN_TRANSIT</text>
+    <text x="700" y="701" fill="#555" font-size="11">DELIVERED</text>
+    <text x="700" y="717" fill="#555" font-size="11">CANCELLED</text>
+    <text x="700" y="733" fill="#555" font-size="11">REFUNDED</text>
+  </g>
+
+  <!-- CLASS: SupportTicket -->
+  <g id="SupportTicket">
+    <rect x="935" y="600" width="265" height="215" fill="#e8eaf6" stroke="#283593" stroke-width="2" rx="4"/>
+    <rect x="935" y="600" width="265" height="26" fill="#283593" rx="4"/>
+    <rect x="935" y="622" width="265" height="4" fill="#283593"/>
+    <text x="1067" y="618" text-anchor="middle" fill="white" font-weight="bold" font-size="12">SupportTicket</text>
+    <line x1="935" y1="650" x2="1200" y2="650" stroke="#283593" stroke-width="1"/>
+    <text x="945" y="665" fill="#333" font-size="11">- ticketId: String</text>
+    <text x="945" y="679" fill="#333" font-size="11">- subject: String</text>
+    <text x="945" y="693" fill="#333" font-size="11">- status: String</text>
+    <line x1="935" y1="701" x2="1200" y2="701" stroke="#283593" stroke-width="1"/>
+    <text x="945" y="716" fill="#1a237e" font-size="11">+ close(): void</text>
+    <text x="945" y="730" fill="#1a237e" font-size="11">+ escalate(): void</text>
+    <text x="945" y="744" fill="#1a237e" font-size="11">+ respond(message: String): void</text>
+    <text x="945" y="758" fill="#1a237e" font-size="11">+ getTicketId(): String</text>
+    <text x="945" y="772" fill="#1a237e" font-size="11">+ getSubject(): String</text>
+    <text x="945" y="786" fill="#1a237e" font-size="11">+ getStatus(): String</text>
+  </g>
+
+  <!-- CLASS: Rating -->
+  <g id="Rating">
+    <rect x="1250" y="600" width="255" height="215" fill="#fff3e0" stroke="#e65100" stroke-width="2" rx="4"/>
+    <rect x="1250" y="600" width="255" height="26" fill="#e65100" rx="4"/>
+    <rect x="1250" y="622" width="255" height="4" fill="#e65100"/>
+    <text x="1377" y="618" text-anchor="middle" fill="white" font-weight="bold" font-size="12">Rating</text>
+    <line x1="1250" y1="650" x2="1505" y2="650" stroke="#e65100" stroke-width="1"/>
+    <text x="1260" y="665" fill="#333" font-size="11">- ratingId: String</text>
+    <text x="1260" y="679" fill="#333" font-size="11">- score: Integer (1–5)</text>
+    <text x="1260" y="693" fill="#333" font-size="11">- comment: String</text>
+    <text x="1260" y="707" fill="#333" font-size="11">- isApproved: Boolean</text>
+    <line x1="1250" y1="715" x2="1505" y2="715" stroke="#e65100" stroke-width="1"/>
+    <text x="1260" y="730" fill="#1a237e" font-size="11">+ submit(): void</text>
+    <text x="1260" y="744" fill="#1a237e" font-size="11">+ edit(comment: String, score: int): void</text>
+    <text x="1260" y="758" fill="#1a237e" font-size="11">+ getScore(): Integer</text>
+    <text x="1260" y="772" fill="#1a237e" font-size="11">+ isApproved(): Boolean</text>
+    <text x="1260" y="786" fill="#1a237e" font-size="11">+ setApproved(val: boolean): void</text>
+  </g>
+
+  <!-- ============================================================ -->
+  <!-- INHERITANCE -->
+  <!-- ============================================================ -->
+  <!-- GuestClient → User -->
+  <line x1="180" y1="265" x2="725" y2="185" stroke="#444" stroke-width="1.8" marker-end="url(#inherit)"/>
+  <!-- RegisteredClient → User -->
+  <line x1="700" y1="265" x2="780" y2="185" stroke="#444" stroke-width="1.8" marker-end="url(#inherit)"/>
+  <!-- Admin → User -->
+  <line x1="1292" y1="265" x2="880" y2="185" stroke="#444" stroke-width="1.8" marker-end="url(#inherit)"/>
+
+  <!-- ============================================================ -->
+  <!-- RELATIONSHIPS -->
+  <!-- ============================================================ -->
+
+  <!-- GuestClient places Order -->
+  <line x1="305" y1="360" x2="430" y2="600" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#assoc)"/>
+  <text x="320" y="500" fill="#2e7d32" font-size="10">places 0..*</text>
+
+  <!-- RegisteredClient places Order -->
+  <line x1="700" y1="480" x2="530" y2="600" stroke="#1565c0" stroke-width="1.5" marker-end="url(#assoc)"/>
+  <text x="570" y="555" fill="#1565c0" font-size="10">places &amp; tracks 0..*</text>
+
+  <!-- Seller manages Order -->
+  <line x1="910" y1="465" x2="600" y2="610" stroke="#880e4f" stroke-width="1.5" marker-end="url(#assoc)"/>
+  <text x="730" y="530" fill="#880e4f" font-size="10">manages 0..*</text>
+
+  <!-- Seller owns Product -->
+  <line x1="910" y1="440" x2="280" y2="610" stroke="#f57f17" stroke-width="1.5" marker-end="url(#assoc)"/>
+  <text x="540" y="490" fill="#f57f17" font-size="10">owns 0..*</text>
+
+  <!-- Order uses OrderStatus -->
+  <line x1="640" y1="700" x2="690" y2="700" stroke="#ad1457" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#dep)"/>
+  <text x="645" y="692" fill="#ad1457" font-size="10">«uses»</text>
+
+  <!-- RegisteredClient writes Rating -->
+  <line x1="835" y1="400" x2="1350" y2="600" stroke="#e65100" stroke-width="1.5" marker-end="url(#assoc)"/>
+  <text x="1100" y="490" fill="#e65100" font-size="10">writes 0..*</text>
+
+  <!-- RegisteredClient creates SupportTicket -->
+  <line x1="835" y1="420" x2="1060" y2="600" stroke="#283593" stroke-width="1.5" marker-end="url(#assoc)"/>
+  <text x="920" y="530" fill="#283593" font-size="10">creates 0..*</text>
+
+  <!-- Rating rates Product -->
+  <line x1="1250" y1="720" x2="320" y2="760" stroke="#e65100" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#dep)"/>
+  <text x="720" y="790" fill="#e65100" font-size="10">rates</text>
+
+  <!-- Admin resolves SupportTicket -->
+  <line x1="1292" y1="420" x2="1130" y2="600" stroke="#4a148c" stroke-width="1.5" marker-end="url(#assoc)"/>
+  <text x="1190" y="530" fill="#4a148c" font-size="10">resolves</text>
+
+  <!-- Admin approves Product -->
+  <line x1="1220" y1="380" x2="290" y2="630" stroke="#4a148c" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#dep)"/>
+  <text x="600" y="570" fill="#4a148c" font-size="10">approves</text>
+
+  <!-- Admin moderates Rating -->
+  <line x1="1475" y1="380" x2="1390" y2="600" stroke="#4a148c" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#dep)"/>
+  <text x="1480" y="500" fill="#4a148c" font-size="10">moderates</text>
+
+  <!-- ============================================================ -->
+  <!-- LEGEND -->
+  <!-- ============================================================ -->
+  <rect x="55" y="870" width="580" height="95" fill="white" stroke="#bbb" rx="6" stroke-width="1.2"/>
+  <text x="345" y="890" text-anchor="middle" font-size="12" font-weight="bold"
+        fill="#333" font-family="Segoe UI, Arial">Legendă</text>
+
+  <line x1="75" y1="910" x2="115" y2="910" stroke="#444" stroke-width="1.8" marker-end="url(#inherit)"/>
+  <text x="120" y="914" font-size="11" fill="#333">Moștenire</text>
+
+  <line x1="75" y1="930" x2="115" y2="930" stroke="#333" stroke-width="1.5" marker-end="url(#assoc)"/>
+  <text x="120" y="934" font-size="11" fill="#333">Asociere</text>
+
+  <line x1="75" y1="950" x2="115" y2="950" stroke="#777" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#dep)"/>
+  <text x="120" y="954" font-size="11" fill="#333">Dependență «uses»</text>
+
+  <rect x="260" y="900" width="13" height="13" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="278" y="912" font-size="11" fill="#333">GuestClient</text>
+  <rect x="260" y="920" width="13" height="13" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="278" y="932" font-size="11" fill="#333">RegisteredClient</text>
+  <rect x="260" y="940" width="13" height="13" fill="#fce4ec" stroke="#880e4f"/>
+  <text x="278" y="952" font-size="11" fill="#333">Seller</text>
+  <rect x="260" y="960" width="13" height="13" fill="#ede7f6" stroke="#4a148c"/>
+  <text x="278" y="972" font-size="11" fill="#333">Admin</text>
+
+  <rect x="390" y="900" width="13" height="13" fill="#fff8e1" stroke="#f57f17"/>
+  <text x="408" y="912" font-size="11" fill="#333">Product</text>
+  <rect x="390" y="920" width="13" height="13" fill="#e0f2f1" stroke="#00695c"/>
+  <text x="408" y="932" font-size="11" fill="#333">Order</text>
+  <rect x="390" y="940" width="13" height="13" fill="#e8eaf6" stroke="#283593"/>
+  <text x="408" y="952" font-size="11" fill="#333">SupportTicket</text>
+  <rect x="390" y="960" width="13" height="13" fill="#fff3e0" stroke="#e65100"/>
+  <text x="408" y="972" font-size="11" fill="#333">Rating</text>
+
+  <text x="75" y="990" font-size="10" fill="#888" font-style="italic">
+    Albastru închis = metode publice (+) | Gri închis = atribute private (-)
+  </text>
+
+</svg>
